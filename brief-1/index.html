@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>Tinker</title>
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <header>
@@ -136,27 +139,41 @@
     </div>
     <div class="blog">
       <div class="blog-aside">
-        <h2>Our blog posts</h2>
+        <h2>OUR BLOG POSTS</h2>
         <hr />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, minus.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+          veniam ab dolorem, laborum eligendi maiores voluptates at nobis
+          perspiciatis dignissimos.
         </p>
         <div class="button-container">
-          <button>Lorem ipsum dolor sit</button>
-          <button>Lorem ipsum dolor sit</button>
-          <button>Lorem ipsum dolor sit</button>
-          <button>Lorem ipsum dolor sit</button>
+          <button class="blog-button" type="button" data-article="1">
+            Lorem ipsum dolor sit
+          </button>
+          <button class="blog-button" type="button" data-article="2">
+            Lorem ipsum dolor sit
+          </button>
+          <button class="blog-button" type="button" data-article="3">
+            Lorem ipsum dolor sit
+          </button>
+          <button class="blog-button" type="button" data-article="4">
+            Lorem ipsum dolor sit
+          </button>
         </div>
       </div>
       <div class="blog-preview">
-        <img src="" alt="" />
+        <img
+          class="preview-image"
+          src="./assets/blog/blog_item_01.jpg"
+          alt="Article 1 alt"
+        />
         <div class="blog-preview-infos">
-          <p>Lorem ipsum dolor sit.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed,
-            illum. Culpa, nostrum sapiente eius exercitationem magni dolorem!
-            Tenetur, illum sint.
+          <p class="preview-article-title">Article 1 title</p>
+          <p class="preview-article-tags">Article 1 tags tags super cool</p>
+          <p class="preview-article-description">
+            Article 1 description Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Sed, illum. Culpa, nostrum sapiente eius
+            exercitationem magni dolorem!
           </p>
         </div>
       </div>
