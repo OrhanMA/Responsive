@@ -1,0 +1,13 @@
+{
+  "name": "responsive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "sass --watch ./brief-1/styles/sass/index.sass:./brief-1/styles/css/index.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
