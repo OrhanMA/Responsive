@@ -1,17 +1,5 @@
-/* Error: Expected newline.
- *   ,
- * 1 | h1 {
- *   |    ^
- *   '
- *   brief-1/styles/sass/index.sass 1:4  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Expected newline.\a   \2577 \a 1 \2502  h1 {\a   \2502     ^\a   \2575 \a   brief-1/styles/sass/index.sass 1:4  root stylesheet";
+h1 {
+  color: blue;
 }
+
+/*# sourceMappingURL=index.css.map */
