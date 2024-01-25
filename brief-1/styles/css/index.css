@@ -76,6 +76,196 @@ iframe {
   width: 100%;
 }
 
+.mobile-menu {
+  display: none;
+  justify-content: center;
+  position: absolute;
+  width: 60%;
+  top: 4rem;
+  right: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgb(245, 205, 3);
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+.mobile-menu div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+.mobile-menu div :last-child {
+  border-bottom: none;
+}
+.mobile-menu div a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  width: 80%;
+  border-bottom: solid 1px white;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.mobile-menu div a:hover {
+  cursor: pointer;
+  color: rgb(6, 210, 233);
+}
+.mobile-menu div button {
+  background-color: white;
+  padding: 0.5rem 0.7rem;
+  border: none;
+  border-radius: 20px;
+}
+
+header.active {
+  background-color: rgb(23, 35, 76);
+}
+
+header {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+@media screen and (min-width: 640px) {
+  header {
+    padding: 1rem 5rem;
+  }
+}
+header div {
+  background-color: rgb(245, 205, 3);
+  padding: 0.4rem 0.5rem;
+  border-radius: 10%;
+}
+header div svg {
+  width: 20px;
+  height: auto;
+  color: rgb(245, 205, 3);
+}
+header .hamb-icon:hover {
+  cursor: pointer;
+  background-color: rgb(6, 210, 233);
+}
+@media screen and (min-width: 768px) {
+  header .hamb-icon {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header {
+    padding: 1rem 10rem;
+  }
+}
+header .navigation-menu {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  header .navigation-menu {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    font-size: 0.8rem;
+  }
+  header .navigation-menu a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.621);
+  }
+  header .navigation-menu a:hover {
+    color: rgb(245, 205, 3);
+  }
+}
+header p {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+header p span {
+  color: rgb(245, 205, 3);
+  font-size: 1.5rem;
+}
+header p:hover {
+  color: rgb(6, 210, 233);
+  cursor: pointer;
+}
+
+.hero {
+  background-image: url("../../assets/banner_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: white;
+}
+.hero h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.hero h1 :nth-child(1),
+.hero h1 :nth-child(2) {
+  font-weight: bold;
+}
+.hero h1 :nth-child(1) {
+  color: orange;
+}
+.hero h1 :nth-child(2) {
+  color: rgb(6, 210, 233);
+}
+.hero p {
+  width: 80%;
+  font-size: 0.8rem;
+  text-align: center;
+}
+.hero button {
+  background-color: white;
+  margin-top: 1rem;
+  padding: 0.5rem 0.8rem;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    width: 60%;
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    width: 45%;
+    font-size: 1rem;
+  }
+  .hero button {
+    font-size: 1rem;
+  }
+}
+
 .features {
   background-image: url("../../assets/about-bg.jpg");
   background-repeat: no-repeat;

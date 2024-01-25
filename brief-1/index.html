@@ -10,11 +10,8 @@
     <script src="./script.js" defer></script>
   </head>
   <body>
-    <header>
-      <p>
-        <span>T</span>
-        inker
-      </p>
+    <header class="header">
+      <p><span>T</span>inker</p>
       <nav class="navigation-menu">
         <a href="#">HOME</a>
         <a href="#">ABOUT US</a>
@@ -22,18 +19,35 @@
         <a href="#">BLOG</a>
         <a href="#">CONTACT US</a>
       </nav>
-      <button>
-        <img src="" alt="" />
-      </button>
-      <nav id="mobile-menu">{# injecter la navigation avec javascript #}</nav>
+      <div class="hamb-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path
+            fill="#FFFFFF"
+            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+          />
+        </svg>
+      </div>
+      <nav class="mobile-menu">
+        <div>
+          <a>Menu item</a>
+          <a>Menu item</a>
+          <a>Menu item</a>
+          <a>Menu item</a>
+          <button class="close-button">close</button>
+        </div>
+      </nav>
     </header>
-    <div>
-      <h1>TINKER HTML5 Template</h1>
+    <div class="hero">
+      <h1>
+        <span>TINKER </span>
+        <span>HTML5 </span>
+        Template
+      </h1>
       <p>
         Tinker is free HTML template from templatemo.com that can be used for
         any kind of website. Please tell your friends about us. Thank you.
       </p>
-      <button>let's start</button>
+      <button>LET'S START</button>
     </div>
     <div class="features">
       <div class="features-card">

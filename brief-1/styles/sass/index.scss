@@ -70,9 +70,206 @@ $yellow: rgb(245, 205, 3);
 $blue: rgb(6, 210, 233);
 $gray: rgb(150, 150, 150);
 $dark-gray: rgb(77, 91, 103);
+$orange: orange;
 
 iframe {
   width: 100%;
+}
+
+.mobile-menu {
+  display: none;
+  justify-content: center;
+  position: absolute;
+  width: 60%;
+  top: 4rem;
+  right: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: $yellow;
+  color: white;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+
+    :last-child {
+      border-bottom: none;
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
+      color: white;
+      width: 80%;
+      border-bottom: solid 1px white;
+      padding-bottom: 0.5rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    a:hover {
+      cursor: pointer;
+      color: $blue;
+    }
+
+    button {
+      background-color: white;
+      padding: 0.5rem 0.7rem;
+      border: none;
+      border-radius: 20px;
+    }
+  }
+}
+
+header.active {
+  background-color: rgb(23, 35, 76);
+}
+
+header {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+
+  @media screen and (min-width: 640px) {
+    padding: 1rem 5rem;
+  }
+
+  div {
+    background-color: $yellow;
+    padding: 0.4rem 0.5rem;
+    border-radius: 10%;
+    svg {
+      width: 20px;
+      height: auto;
+      color: $yellow;
+    }
+  }
+  .hamb-icon:hover {
+    cursor: pointer;
+    background-color: $blue;
+  }
+
+  .hamb-icon {
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 1rem 10rem;
+  }
+  .navigation-menu {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: flex-end;
+      gap: 2rem;
+      font-size: 0.8rem;
+      a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.621);
+      }
+      a:hover {
+        color: $yellow;
+      }
+    }
+  }
+
+  p {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    span {
+      color: $yellow;
+      font-size: 1.5rem;
+    }
+  }
+  p:hover {
+    color: $blue;
+    cursor: pointer;
+  }
+}
+
+.hero {
+  background-image: url("../../assets/banner_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: white;
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+
+    :nth-child(1),
+    :nth-child(2) {
+      font-weight: bold;
+    }
+    :nth-child(1) {
+      color: $orange;
+    }
+    :nth-child(2) {
+      color: $blue;
+    }
+  }
+  p {
+    width: 80%;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  button {
+    background-color: white;
+    margin-top: 1rem;
+    padding: 0.5rem 0.8rem;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  @media screen and (min-width: 768px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+    p {
+      width: 60%;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      width: 45%;
+      font-size: 1rem;
+    }
+
+    button {
+      font-size: 1rem;
+    }
+  }
 }
 
 .features {

@@ -1,3 +1,52 @@
+// boolean pour garder trace du state de la page
+var isMobileMenuOpen = false;
+var hambIcon = document.querySelector(".hamb-icon");
+var mobileMenu = document.querySelector(".mobile-menu");
+var closeButton = document.querySelector(".close-button");
+var header = document.querySelector("header");
+// je vérifie la width du viewport pour cacher automatique le menu mobile si on pass en taille tablette (>= 768px)
+window.addEventListener("resize", function (e) {
+    isMobileMenuOpen = false;
+    if (window.innerWidth >= 768) {
+        updateMobileMenuStyle(isMobileMenuOpen);
+    }
+});
+/**
+ * Je vérifie la hauteur séparant le haut du viewport (de ce que tu vois) du document (tout le document, même ce qu'on ne voit pas)
+ * Si le scroll atteint 150, je met un background color sur le header.
+ */
+window.addEventListener("scroll", function (e) {
+    if (header) {
+        if (window.scrollY > 150) {
+            header.style.backgroundColor = "rgb(23, 35, 76)";
+            header.classList.add("active");
+        }
+        else if (window.screenY <= 150) {
+            header.style.backgroundColor = "transparent";
+            header.classList.remove("active");
+        }
+    }
+});
+// j'écoute le button menu mobile et le butto de fermeture du menu mobile
+// si un des deux est cliqué, j'inverse l'état d'ouverture du menu mobile et change le style en conséquence
+hambIcon.addEventListener("click", function (e) {
+    isMobileMenuOpen = !isMobileMenuOpen;
+    updateMobileMenuStyle(isMobileMenuOpen);
+});
+closeButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    isMobileMenuOpen = !isMobileMenuOpen;
+    updateMobileMenuStyle(isMobileMenuOpen);
+});
+/** cache ou montre le menu mobile selon l'état du boolean */
+function updateMobileMenuStyle(isMobileMenuOpen) {
+    if (isMobileMenuOpen) {
+        mobileMenu.style.display = "flex";
+    }
+    else {
+        mobileMenu.style.display = "none";
+    }
+}
 /**
  * Récupère les buttons de la section blog-aside
  * Pour le typage: on récupère un tableau (array) composé de noeux (nodes) du DOM et ces nodes sont des éléments buttons donc type: NodeListOf<HTMLButtonElement>
