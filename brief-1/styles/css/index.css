@@ -89,6 +89,7 @@ h6 {
 @media screen and (min-width: 1024px) {
   .blog {
     flex-direction: row;
+    padding: 0 1rem 0 0;
   }
 }
 .blog .blog-preview {
@@ -149,7 +150,12 @@ h6 {
 }
 @media screen and (min-width: 1024px) {
   .blog .blog-aside {
-    width: 50%;
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .blog .blog-aside {
+    width: 30%;
   }
 }
 .blog .blog-aside h2 {
