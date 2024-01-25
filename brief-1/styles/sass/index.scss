@@ -216,13 +216,19 @@ $dark-gray: rgb(77, 91, 103);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: $dark-gray;
   color: white;
   padding: 3rem;
   gap: 1rem;
 
+  min-height: 50vh;
+
   @media screen and (min-width: 768px) {
     padding: 5rem;
+  }
+  @media screen and (min-width: 1024px) {
+    min-height: 60vh;
   }
 
   h2 {
@@ -247,8 +253,12 @@ $dark-gray: rgb(77, 91, 103);
     text-align: center;
     font-size: 0.8rem;
     opacity: 90%;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 640px) {
+      width: 90%;
       font-size: 1rem;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 1.1rem;
     }
     @media screen and (min-width: 1024px) {
       width: 80%;
