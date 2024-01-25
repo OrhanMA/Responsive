@@ -72,6 +72,10 @@ h6 {
   font-size: 16px;
 }
 
+iframe {
+  width: 100%;
+}
+
 .blog {
   display: flex;
   flex-direction: column;

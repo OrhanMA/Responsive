@@ -71,6 +71,10 @@ $blue: rgb(6, 210, 233);
 $gray: rgb(150, 150, 150);
 $dark-gray: rgb(77, 91, 103);
 
+iframe {
+  width: 100%;
+}
+
 .blog {
   display: flex;
   flex-direction: column;
