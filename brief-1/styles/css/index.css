@@ -152,6 +152,44 @@ iframe {
   padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
+.citation {
+  background-color: rgb(245, 205, 3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
+  color: white;
+}
+@media screen and (min-width: 1024px) {
+  .citation .quote {
+    width: 60%;
+  }
+}
+.citation .quote {
+  background-color: white;
+  font-style: italic;
+  color: rgb(150, 150, 150);
+  padding: 1.5rem;
+  text-align: center;
+}
+.citation .author {
+  text-align: center;
+}
+.citation .pagination {
+  display: flex;
+  gap: 0.5rem;
+}
+.citation .pagination :nth-child(2) {
+  background-color: white;
+}
+.citation .pagination div {
+  background-color: rgba(255, 255, 255, 0.46);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
 .blog {
   display: flex;
   flex-direction: column;
