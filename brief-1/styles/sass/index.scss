@@ -69,6 +69,7 @@ h6 {
 $yellow: rgb(245, 205, 3);
 $blue: rgb(6, 210, 233);
 $gray: rgb(150, 150, 150);
+$dark-gray: rgb(77, 91, 103);
 
 .blog {
   display: flex;
@@ -208,5 +209,65 @@ $gray: rgb(150, 150, 150);
         color: $yellow;
       }
     }
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $dark-gray;
+  color: white;
+  padding: 3rem;
+  gap: 1rem;
+
+  @media screen and (min-width: 768px) {
+    padding: 5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    @media screen and (min-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  hr {
+    width: 80%;
+    color: $gray;
+    @media screen and (min-width: 1024px) {
+      width: 70%;
+    }
+    @media screen and (min-width: 1440px) {
+      width: 50%;
+    }
+  }
+
+  p {
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 90%;
+    @media screen and (min-width: 768px) {
+      font-size: 1rem;
+    }
+    @media screen and (min-width: 1024px) {
+      width: 80%;
+    }
+    @media screen and (min-width: 1440px) {
+      width: 50%;
+    }
+  }
+
+  button {
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    background-color: $blue;
+    margin-top: 1rem;
+  }
+
+  button:hover {
+    cursor: pointer;
   }
 }
