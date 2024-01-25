@@ -222,4 +222,85 @@ h6 {
   color: rgb(245, 205, 3);
 }
 
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(77, 91, 103);
+  color: white;
+  padding: 3rem;
+  gap: 1rem;
+  min-height: 50vh;
+}
+@media screen and (min-width: 768px) {
+  .contact {
+    padding: 5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .contact {
+    min-height: 60vh;
+  }
+}
+.contact h2 {
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  .contact h2 {
+    font-size: 1.5rem;
+  }
+}
+.contact hr {
+  width: 80%;
+  color: rgb(150, 150, 150);
+}
+@media screen and (min-width: 1024px) {
+  .contact hr {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .contact hr {
+    width: 50%;
+  }
+}
+.contact p {
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 90%;
+}
+@media screen and (min-width: 640px) {
+  .contact p {
+    width: 90%;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact p {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .contact p {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .contact p {
+    width: 50%;
+  }
+}
+.contact button {
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background-color: rgb(6, 210, 233);
+  margin-top: 1rem;
+}
+.contact button:hover {
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=index.css.map */
