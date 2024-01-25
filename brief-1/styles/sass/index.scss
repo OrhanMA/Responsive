@@ -70,6 +70,8 @@ $yellow: rgb(245, 205, 3);
 $blue: rgb(6, 210, 233);
 $gray: rgb(150, 150, 150);
 
+@import "_template";
+
 .blog {
   display: flex;
   flex-direction: column;
@@ -191,6 +193,7 @@ $gray: rgb(150, 150, 150);
       button:hover {
         cursor: pointer;
       }
+      
       button {
         background-color: white;
         color: black;
@@ -210,3 +213,73 @@ $gray: rgb(150, 150, 150);
     }
   }
 }
+
+// Gallery
+
+.gallery {
+  display: grid;
+  grid-template-areas: 
+  "gallery-aside"
+  "gallery-container";
+}
+
+.gallery-aside {
+  background-color: $blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: gallery-aside;
+}
+
+.gallery-aside hr {
+  color:white;
+  width: 50%;
+  margin:5% 5%;
+  border: 1px solid white;
+}
+
+.gallery-aside p {
+  color: white;
+  margin-left: 5%;
+  margin-right: 5%
+}
+
+.gallery-aside h2 {
+  color: white;
+  margin-top: 10%;
+}
+
+.gallery-aside nav {
+  margin: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-aside button {
+  color: white;
+  border: none;
+  background-color: $blue;
+  padding: 0;
+  margin: 7%;
+}
+
+.gallery-aside button:hover {
+  color: $yellow;
+}
+.gallery-container {
+  grid-area: gallery-container;
+}
+.gallery-container img {
+  margin: 20px auto;
+}
+
+@media screen and (min-width: 768px) {
+  @import "_tablette";
+}
+
+@media screen and (min-width: 1024px) {
+  @import "_desktop";
+}
+
+
+
