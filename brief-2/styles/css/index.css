@@ -288,7 +288,7 @@ p {
   margin-bottom: 2rem;
   color: #fafafb;
   font-size: 1.1rem;
-  animation: growOpacity 2s forwards;
+  animation: growOpacity 3s forwards;
 }
 .footer .looking span {
   color: #04e06d;
@@ -315,6 +315,17 @@ p {
 .footer .bottom-footer .socials .social-svg {
   width: 20px;
   height: 20px;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(3px);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
 }
 
 /*# sourceMappingURL=index.css.map */
