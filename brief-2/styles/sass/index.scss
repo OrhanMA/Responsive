@@ -90,7 +90,7 @@ p {
     width: 100%;
     height: 50vh;
     h3 {
-      font-size: 6rem;
+      font-size: 7rem;
       text-align: center;
       color: $violet;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -102,11 +102,52 @@ p {
     .green-square {
       position: absolute;
       background-color: $base-color;
-      border: solid 15px $green;
-      width: 15rem;
-      height: 17rem;
+      width: 18rem;
+      height: 20rem;
       z-index: -10;
       // pas de style pour l'instant
+
+      .line {
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        transition: 1s ease-in-out;
+        background-color: $green;
+      }
+
+      .line-01,
+      .line-03 {
+        animation: growHorizontalLine 0.5s ease-in-out forwards;
+      }
+      .line-02,
+      .line-04 {
+        animation: growVerticalLine 0.5s ease-in-out forwards;
+      }
+
+      .line-01 {
+        width: 0%;
+        top: 0;
+        left: 0;
+        animation-delay: 0ms;
+      }
+      .line-02 {
+        height: 0%;
+        top: 0;
+        right: 0;
+        animation-delay: 0.5s;
+      }
+      .line-03 {
+        width: 0%;
+        bottom: 0;
+        right: 0;
+        animation-delay: 1s;
+      }
+      .line-04 {
+        height: 0%;
+        bottom: 0;
+        left: 0;
+        animation-delay: 1.5s;
+      }
     }
   }
   .article {
@@ -161,5 +202,22 @@ p {
     h4 {
       color: white;
     }
+  }
+}
+
+@keyframes growHorizontalLine {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes growVerticalLine {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 100%;
   }
 }
