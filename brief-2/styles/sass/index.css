@@ -91,7 +91,7 @@ p {
   height: 50vh;
 }
 .insights .insights-title h3 {
-  font-size: 7rem;
+  font-size: 6rem;
   text-align: center;
   color: #320255;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -99,48 +99,10 @@ p {
 .insights .insights-title .green-square {
   position: absolute;
   background-color: #fafafb;
-  width: 18rem;
-  height: 20rem;
+  border: solid 15px #04e06d;
+  width: 15rem;
+  height: 17rem;
   z-index: -10;
-}
-.insights .insights-title .green-square .line {
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  transition: 1s ease-in-out;
-  background-color: #04e06d;
-}
-.insights .insights-title .green-square .line-01,
-.insights .insights-title .green-square .line-03 {
-  animation: growHorizontalLine 0.5s ease-in-out forwards;
-}
-.insights .insights-title .green-square .line-02,
-.insights .insights-title .green-square .line-04 {
-  animation: growVerticalLine 0.5s ease-in-out forwards;
-}
-.insights .insights-title .green-square .line-01 {
-  width: 0%;
-  top: 0;
-  left: 0;
-  animation-delay: 0ms;
-}
-.insights .insights-title .green-square .line-02 {
-  height: 0%;
-  top: 0;
-  right: 0;
-  animation-delay: 0.5s;
-}
-.insights .insights-title .green-square .line-03 {
-  width: 0%;
-  bottom: 0;
-  right: 0;
-  animation-delay: 1s;
-}
-.insights .insights-title .green-square .line-04 {
-  height: 0%;
-  bottom: 0;
-  left: 0;
-  animation-delay: 1.5s;
 }
 .insights .article {
   display: flex;
@@ -188,23 +150,4 @@ p {
 }
 .insights .article:hover h4 {
   color: white;
-}
-
-@keyframes growHorizontalLine {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
-}
-@keyframes growVerticalLine {
-  from {
-    height: 0%;
-  }
-  to {
-    height: 100%;
-  }
-}
-
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */
