@@ -69,6 +69,333 @@ h6 {
 $yellow: rgb(245, 205, 3);
 $blue: rgb(6, 210, 233);
 $gray: rgb(150, 150, 150);
+$dark-gray: rgb(77, 91, 103);
+$orange: orange;
+
+iframe {
+  width: 100%;
+}
+
+.mobile-menu {
+  display: none;
+  justify-content: center;
+  position: absolute;
+  width: 60%;
+  top: 4rem;
+  right: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: $yellow;
+  color: white;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+
+    :last-child {
+      border-bottom: none;
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
+      color: white;
+      width: 80%;
+      border-bottom: solid 1px white;
+      padding-bottom: 0.5rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    a:hover {
+      cursor: pointer;
+      color: $blue;
+    }
+
+    button {
+      background-color: white;
+      padding: 0.5rem 0.7rem;
+      border: none;
+      border-radius: 20px;
+    }
+  }
+}
+
+header.active {
+  background-color: rgb(23, 35, 76);
+}
+
+header {
+  z-index: 20;
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+
+  @media screen and (min-width: 640px) {
+    padding: 1rem 5rem;
+  }
+
+  div {
+    background-color: $yellow;
+    padding: 0.4rem 0.5rem;
+    border-radius: 10%;
+    svg {
+      width: 20px;
+      height: auto;
+      color: $yellow;
+    }
+  }
+  .hamb-icon:hover {
+    cursor: pointer;
+    background-color: $blue;
+  }
+
+  .hamb-icon {
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 1rem 10rem;
+  }
+  .navigation-menu {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: flex-end;
+      gap: 2rem;
+      font-size: 0.8rem;
+      a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.621);
+      }
+      a:hover {
+        color: $yellow;
+      }
+    }
+  }
+
+  p {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    span {
+      color: $yellow;
+      font-size: 1.5rem;
+    }
+  }
+  p:hover {
+    color: $blue;
+    cursor: pointer;
+  }
+}
+
+.hero {
+  background-image: url("../../assets/banner_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: white;
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+
+    :nth-child(1),
+    :nth-child(2) {
+      font-weight: bold;
+    }
+    :nth-child(1) {
+      color: $orange;
+    }
+    :nth-child(2) {
+      color: $blue;
+    }
+  }
+  p {
+    width: 80%;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  button {
+    background-color: white;
+    margin-top: 1rem;
+    padding: 0.5rem 0.8rem;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  @media screen and (min-width: 768px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+    p {
+      width: 60%;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      width: 45%;
+      font-size: 1rem;
+    }
+
+    button {
+      font-size: 1rem;
+    }
+  }
+}
+
+.features {
+  background-image: url("../../assets/about-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3rem;
+  padding: 3rem 1rem;
+  color: white;
+  height: 100vh;
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: 2rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 5rem 2rem;
+  }
+
+  @media screen and (min-width: 640px) {
+    .features-card {
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .features-card {
+      width: 100%;
+      padding: 2rem 1rem;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .features-card {
+      padding: 0;
+    }
+  }
+
+  .features-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    gap: 1.5rem;
+
+    .icon-container {
+      border: solid 2px white;
+      padding: 1.2rem;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $yellow;
+
+      .card-icon {
+        color: white;
+        width: 3rem;
+      }
+    }
+
+    hr {
+      width: 100%;
+    }
+
+    .card-description {
+      text-align: center;
+      font-size: 0.8rem;
+    }
+
+    button {
+      background-color: $blue;
+      color: white;
+      font-size: 0.8rem;
+      border: none;
+      border-radius: 1.5rem;
+      padding: 0.5rem 1rem 0.5rem 1rem;
+    }
+  }
+}
+
+.citation {
+  background-color: $yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
+  color: white;
+
+  @media screen and (min-width: 1024px) {
+    .quote {
+      width: 60%;
+    }
+  }
+  .quote {
+    background-color: white;
+    font-style: italic;
+    color: $gray;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  .author {
+    text-align: center;
+  }
+  .pagination {
+    display: flex;
+    gap: 0.5rem;
+
+    :nth-child(2) {
+      background-color: white;
+    }
+    div {
+      background-color: rgba(255, 255, 255, 0.46);
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+    }
+  }
+}
 
 @import "_template";
 
@@ -79,6 +406,7 @@ $gray: rgb(150, 150, 150);
   background-image: url(../../assets/blog-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   color: white;
 
   @media screen and (min-width: 640px) {
@@ -282,4 +610,73 @@ $gray: rgb(150, 150, 150);
 }
 
 
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $dark-gray;
+  color: white;
+  padding: 3rem;
+  gap: 1rem;
+
+  min-height: 50vh;
+
+  @media screen and (min-width: 768px) {
+    padding: 5rem;
+  }
+  @media screen and (min-width: 1024px) {
+    min-height: 60vh;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    @media screen and (min-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  hr {
+    width: 80%;
+    color: $gray;
+    @media screen and (min-width: 1024px) {
+      width: 70%;
+    }
+    @media screen and (min-width: 1440px) {
+      width: 50%;
+    }
+  }
+
+  p {
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 90%;
+    @media screen and (min-width: 640px) {
+      width: 90%;
+      font-size: 1rem;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 1.1rem;
+    }
+    @media screen and (min-width: 1024px) {
+      width: 80%;
+    }
+    @media screen and (min-width: 1440px) {
+      width: 50%;
+    }
+  }
+
+  button {
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    background-color: $blue;
+    margin-top: 1rem;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+}
 

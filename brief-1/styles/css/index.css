@@ -72,6 +72,318 @@ h6 {
   font-size: 16px;
 }
 
+iframe {
+  width: 100%;
+}
+
+.mobile-menu {
+  display: none;
+  justify-content: center;
+  position: absolute;
+  width: 60%;
+  top: 4rem;
+  right: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgb(245, 205, 3);
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+.mobile-menu div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+.mobile-menu div :last-child {
+  border-bottom: none;
+}
+.mobile-menu div a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  width: 80%;
+  border-bottom: solid 1px white;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.mobile-menu div a:hover {
+  cursor: pointer;
+  color: rgb(6, 210, 233);
+}
+.mobile-menu div button {
+  background-color: white;
+  padding: 0.5rem 0.7rem;
+  border: none;
+  border-radius: 20px;
+}
+
+header.active {
+  background-color: rgb(23, 35, 76);
+}
+
+header {
+  z-index: 20;
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+@media screen and (min-width: 640px) {
+  header {
+    padding: 1rem 5rem;
+  }
+}
+header div {
+  background-color: rgb(245, 205, 3);
+  padding: 0.4rem 0.5rem;
+  border-radius: 10%;
+}
+header div svg {
+  width: 20px;
+  height: auto;
+  color: rgb(245, 205, 3);
+}
+header .hamb-icon:hover {
+  cursor: pointer;
+  background-color: rgb(6, 210, 233);
+}
+@media screen and (min-width: 768px) {
+  header .hamb-icon {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header {
+    padding: 1rem 10rem;
+  }
+}
+header .navigation-menu {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  header .navigation-menu {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    font-size: 0.8rem;
+  }
+  header .navigation-menu a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.621);
+  }
+  header .navigation-menu a:hover {
+    color: rgb(245, 205, 3);
+  }
+}
+header p {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+header p span {
+  color: rgb(245, 205, 3);
+  font-size: 1.5rem;
+}
+header p:hover {
+  color: rgb(6, 210, 233);
+  cursor: pointer;
+}
+
+.hero {
+  background-image: url("../../assets/banner_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: white;
+}
+.hero h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.hero h1 :nth-child(1),
+.hero h1 :nth-child(2) {
+  font-weight: bold;
+}
+.hero h1 :nth-child(1) {
+  color: orange;
+}
+.hero h1 :nth-child(2) {
+  color: rgb(6, 210, 233);
+}
+.hero p {
+  width: 80%;
+  font-size: 0.8rem;
+  text-align: center;
+}
+.hero button {
+  background-color: white;
+  margin-top: 1rem;
+  padding: 0.5rem 0.8rem;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    width: 60%;
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    width: 45%;
+    font-size: 1rem;
+  }
+  .hero button {
+    font-size: 1rem;
+  }
+}
+
+.features {
+  background-image: url("../../assets/about-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3rem;
+  padding: 3rem 1rem;
+  color: white;
+  height: 100vh;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .features {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 5rem 2rem;
+  }
+}
+@media screen and (min-width: 640px) {
+  .features .features-card {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .features .features-card {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .features .features-card {
+    padding: 0;
+  }
+}
+.features .features-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  gap: 1.5rem;
+}
+.features .features-card .icon-container {
+  border: solid 2px white;
+  padding: 1.2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(245, 205, 3);
+}
+.features .features-card .icon-container .card-icon {
+  color: white;
+  width: 3rem;
+}
+.features .features-card hr {
+  width: 100%;
+}
+.features .features-card .card-description {
+  text-align: center;
+  font-size: 0.8rem;
+}
+.features .features-card button {
+  background-color: rgb(6, 210, 233);
+  color: white;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.citation {
+  background-color: rgb(245, 205, 3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
+  color: white;
+}
+@media screen and (min-width: 1024px) {
+  .citation .quote {
+    width: 60%;
+  }
+}
+.citation .quote {
+  background-color: white;
+  font-style: italic;
+  color: rgb(150, 150, 150);
+  padding: 1.5rem;
+  text-align: center;
+}
+.citation .author {
+  text-align: center;
+}
+.citation .pagination {
+  display: flex;
+  gap: 0.5rem;
+}
+.citation .pagination :nth-child(2) {
+  background-color: white;
+}
+.citation .pagination div {
+  background-color: rgba(255, 255, 255, 0.46);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
 .blog {
   display: flex;
   flex-direction: column;
@@ -79,6 +391,7 @@ h6 {
   background-image: url(../../assets/blog-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   color: white;
 }
 @media screen and (min-width: 640px) {
@@ -222,6 +535,7 @@ h6 {
   color: rgb(245, 205, 3);
 }
 
+
 .gallery {
   display: grid;
   grid-template-areas: "gallery-aside" "gallery-container";
@@ -320,5 +634,87 @@ h6 {
     grid-area: item6;
   }
 }
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(77, 91, 103);
+  color: white;
+  padding: 3rem;
+  gap: 1rem;
+  min-height: 50vh;
+}
+@media screen and (min-width: 768px) {
+  .contact {
+    padding: 5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .contact {
+    min-height: 60vh;
+  }
+}
+.contact h2 {
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  .contact h2 {
+    font-size: 1.5rem;
+  }
+}
+.contact hr {
+  width: 80%;
+  color: rgb(150, 150, 150);
+}
+@media screen and (min-width: 1024px) {
+  .contact hr {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .contact hr {
+    width: 50%;
+  }
+}
+.contact p {
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 90%;
+}
+@media screen and (min-width: 640px) {
+  .contact p {
+    width: 90%;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact p {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .contact p {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .contact p {
+    width: 50%;
+  }
+}
+.contact button {
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background-color: rgb(6, 210, 233);
+  margin-top: 1rem;
+}
+.contact button:hover {
+  cursor: pointer;
+}
+
 
 /*# sourceMappingURL=index.css.map */
