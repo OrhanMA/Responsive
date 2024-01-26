@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "sass --watch ./brief-1/styles/sass/index.scss:./brief-1/styles/css/index.css",
     "watch-2": "sass --watch ./brief-2/styles/sass/index.scss:./brief-2/styles/css/index.css",
-    "tsc": "tsc ./brief-1/script.ts"
+    "tsc": "tsc ./brief-1/script.ts",
+    "tsc-2": "tsc ./brief-2/script.ts"
   },
   "keywords": [],
   "author": "",
