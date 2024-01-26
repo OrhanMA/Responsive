@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Playfair Display";
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  font-size: 16px;
+}
+
+$violet: #320255;
+$green: #04e06d;
+$light-gray: #b4b4b5;
+$base-color: #fafafb;
+
+body {
+  background-color: $base-color;
+}
+
+p {
+  font-family: sans-serif;
+  font-weight: 300;
+}
+.insights {
+  .insights-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    h3 {
+      font-size: 6rem;
+      text-align: center;
+      color: $violet;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      // pas de style pour le moment
+    }
+
+    .green-square {
+      position: absolute;
+      background-color: $base-color;
+      border: solid 15px $green;
+      width: 15rem;
+      height: 17rem;
+      z-index: -10;
+      // pas de style pour l'instant
+    }
+  }
+  .article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+
+    h4 {
+      color: $violet;
+      font-size: 2.5rem;
+      margin-top: 1rem;
+    }
+    p {
+      color: $light-gray;
+    }
+    .arrow {
+      width: 20px;
+      height: auto;
+      transform: translateX(0);
+      transition: transform 0.5s ease;
+    }
+
+    .background-div {
+      width: 100%;
+      height: 0%;
+      background-color: $violet;
+      position: absolute;
+      transform: translateY(100px);
+      z-index: -1;
+      transition: height 0.5s ease, transform 0.5s ease;
+    }
+  }
+
+  .article:hover {
+    cursor: pointer;
+
+    .background-div {
+      height: 100%;
+      transform: translateY(0%);
+      transition: height 0.5s ease, transform 0.5s ease;
+    }
+
+    .arrow {
+      transform: translateX(10px);
+    }
+
+    h4 {
+      color: white;
+    }
+  }
+}
