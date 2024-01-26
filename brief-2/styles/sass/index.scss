@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -20,7 +22,7 @@
 body {
   line-height: 1.2;
   -webkit-font-smoothing: antialiased;
-  // font-family: sans-serif;
+  font-family: "Playfair Display";
 }
 /*
   5. Improve media defaults
@@ -66,9 +68,9 @@ h6 {
   font-size: 16px;
 }
 
-$violet: #210b39;
+$violet: #320255;
 $green: #04e06d;
-$light-gray: #d4d2d9;
+$light-gray: #b4b4b5;
 $base-color: #fafafb;
 
 body {
@@ -80,12 +82,32 @@ p {
   font-weight: 300;
 }
 .insights {
-  h3 {
-    // pas de style pour le moment
-  }
+  .insights-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    h3 {
+      font-size: 6rem;
+      text-align: center;
+      color: $violet;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      // pas de style pour le moment
+    }
 
-  .green-square {
-    // pas de style pour l'instant
+    .green-square {
+      position: absolute;
+      background-color: $base-color;
+      border: solid 15px $green;
+      width: 15rem;
+      height: 17rem;
+      z-index: -10;
+      // pas de style pour l'instant
+    }
   }
   .article {
     display: flex;
@@ -96,11 +118,11 @@ p {
     padding: 1rem;
     position: relative;
     overflow: hidden;
-    // transition: background-color 0.5s ease;
 
     h4 {
       color: $violet;
       font-size: 2.5rem;
+      margin-top: 1rem;
     }
     p {
       color: $light-gray;
@@ -112,22 +134,26 @@ p {
       transition: transform 0.5s ease;
     }
 
-    .test {
-      background-color: $violet;
+    .background-div {
       width: 100%;
       height: 0%;
-      z-index: -10;
+      background-color: $violet;
       position: absolute;
-      transition: height 0.5s ease;
+      transform: translateY(100px);
+      z-index: -1;
+      transition: height 0.5s ease, transform 0.5s ease;
     }
   }
 
   .article:hover {
-    // background-color: $violet;
     cursor: pointer;
-    .test {
+
+    .background-div {
       height: 100%;
+      transform: translateY(0%);
+      transition: height 0.5s ease, transform 0.5s ease;
     }
+
     .arrow {
       transform: translateX(10px);
     }
