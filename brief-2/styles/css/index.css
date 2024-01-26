@@ -1,0 +1,127 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  background-color: #fafafb;
+}
+
+p {
+  font-family: sans-serif;
+  font-weight: 300;
+}
+
+.insights .article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.insights .article h4 {
+  color: #210b39;
+  font-size: 2.5rem;
+}
+.insights .article p {
+  color: #d4d2d9;
+}
+.insights .article .arrow {
+  width: 20px;
+  height: auto;
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+}
+.insights .article .test {
+  background-color: #210b39;
+  width: 100%;
+  height: 0%;
+  z-index: -10;
+  position: absolute;
+  transition: height 0.5s ease;
+}
+.insights .article:hover {
+  cursor: pointer;
+}
+.insights .article:hover .test {
+  height: 100%;
+}
+.insights .article:hover .arrow {
+  transform: translateX(10px);
+}
+.insights .article:hover h4 {
+  color: white;
+}
+
+/*# sourceMappingURL=index.css.map */
