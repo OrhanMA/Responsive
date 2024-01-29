@@ -2,7 +2,7 @@
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log(entry);
+    // console.log(entry);
     if (entry.isIntersecting) {
       entry.target.classList.add("show");
     }
@@ -58,3 +58,28 @@ window.addEventListener("scroll", () => {
     header.classList.remove("isOnScroll");
   }
 });
+
+let menuOpen = false;
+
+const dropdown = document.querySelector(".dropdown");
+
+const menuButton = document.querySelector(".menu-button");
+
+const closeButton = document.querySelector(".close-button");
+
+const buttons = [menuButton, closeButton];
+buttons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (!menuOpen) {
+      menuOpen = true;
+      dropdown.classList.remove("dropdown-hidden");
+    } else {
+      menuOpen = false;
+      dropdown.classList.add("dropdown-hidden");
+    }
+  });
+});
+
+// console.log(menuButton);
+// console.log(closeButton);
