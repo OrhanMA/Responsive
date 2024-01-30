@@ -104,8 +104,9 @@ p {
   overflow: hidden;
 
   svg {
+    z-index: 90;
     position: absolute;
-    transform: translate(1250px);
+    transform: translate(90vw);
     width: 30px;
     height: 30px;
     :hover {
@@ -144,6 +145,7 @@ p {
     border: 5px solid $green;
     animation: borderAnimation 5s linear;
   }
+  
   @keyframes borderAnimation {
     0% {
       border: solid 5px white;
