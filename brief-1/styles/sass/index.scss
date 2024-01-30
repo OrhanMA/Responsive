@@ -609,10 +609,6 @@ header {
 //   @import "_tablette";
 // }
 
-@media screen and (min-width: 1024px) {
-  @import "_desktop";
-}
-
 
 .contact {
   display: flex;
@@ -786,6 +782,10 @@ header {
 
 .social-style svg {
   fill: $dark-gray ;
+}
+
+@media screen and (min-width: 1024px) {
+  @import "_desktop";
 }
 
 

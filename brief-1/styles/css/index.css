@@ -596,47 +596,6 @@ header p:hover {
   padding: 0 8% 4% 8%;
 }
 
-@media screen and (min-width: 1024px) {
-  .gallery {
-    align-items: stretch;
-    justify-items: start;
-    grid-template-areas: "gallery-aside gallery-container";
-  }
-  .gallery-aside {
-    padding-top: 10%;
-    padding-left: 10%;
-    width: 40%;
-  }
-  .gallery-aside nav {
-    margin-top: 30%;
-  }
-  .gallery-container {
-    width: 72%;
-    display: grid;
-    grid-template-areas: "item1 item2" "item3 item4" "item5 item6";
-  }
-  .gallery-container img {
-    margin: 0;
-  }
-  .item1 {
-    grid-area: item1;
-  }
-  .item2 {
-    grid-area: item2;
-  }
-  .item3 {
-    grid-area: item3;
-  }
-  .item4 {
-    grid-area: item4;
-  }
-  .item5 {
-    grid-area: item5;
-  }
-  .item6 {
-    grid-area: item6;
-  }
-}
 .contact {
   display: flex;
   flex-direction: column;
@@ -817,6 +776,77 @@ header p:hover {
 
 .social-style svg {
   fill: rgb(77, 91, 103);
+}
+
+@media screen and (min-width: 1024px) {
+  p, span {
+    font-size: 0.8rem;
+  }
+  .gallery {
+    align-items: stretch;
+    justify-items: start;
+    grid-template-areas: "gallery-aside gallery-container";
+  }
+  .gallery-aside {
+    padding-top: 10%;
+    padding-left: 25%;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .gallery-aside hr {
+    margin: 5% 0;
+  }
+  .gallery-aside p {
+    margin-left: 0;
+  }
+  .gallery-aside nav {
+    margin: 15% 0 0 0;
+  }
+  .gallery-aside button {
+    margin-left: 0;
+  }
+  .gallery-container {
+    width: 72%;
+    padding-left: 3%;
+    padding-bottom: 4%;
+    display: grid;
+    grid-template-areas: "item1 item2" "item3 item4" "item5 item6";
+  }
+  .gallery-container img {
+    margin: 0;
+    padding: 0;
+  }
+  .footer hr {
+    border-color: rgb(77, 91, 103);
+    width: 0;
+    margin: 0;
+  }
+  .footer-container {
+    grid-template-areas: "copyright location more-info social-media";
+    margin: 3% 3% 3% 0;
+    gap: 10px;
+  }
+  .copyright {
+    text-align: start;
+    margin-left: 15%;
+    padding-top: 1%;
+  }
+  .location-container {
+    text-align: left;
+  }
+  .more-info {
+    padding: 0 25% 0 25%;
+  }
+  .more-info-container {
+    text-align: start;
+  }
+  .social-container {
+    margin-top: 0;
+  }
+  .social-style {
+    width: 12%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
