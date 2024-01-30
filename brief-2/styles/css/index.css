@@ -102,8 +102,9 @@ p {
   overflow: hidden;
 }
 .dropdown svg {
+  z-index: 90;
   position: absolute;
-  transform: translate(1250px);
+  transform: translate(90vw);
   width: 30px;
   height: 30px;
 }
@@ -129,10 +130,48 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: borderAnimation 5s linear;
 }
 .dropdown .agency {
   transform: translateX(25px);
   animation: fromTopLeft 1.5s ease-in-out;
+  border: 5px solid #04e06d;
+  animation: borderAnimation 5s linear;
+}
+@keyframes borderAnimation {
+  0% {
+    border: solid 5px white;
+    border-left: solid 5px lime;
+  }
+  25% {
+    border: solid 5px white;
+    border-left: solid 5px lime;
+  }
+  25.02% {
+    border: solid 5px white;
+    border-left: solid 5px lime;
+    border-bottom: solid 5px lime;
+  }
+  50% {
+    border: solid 5px white;
+    border-left: solid 5px lime;
+    border-bottom: solid 5px lime;
+  }
+  50.02% {
+    border: solid 5px white;
+    border-left: solid 5px lime;
+    border-bottom: solid 5px lime;
+    border-right: solid 5px lime;
+  }
+  75% {
+    border: solid 5px white;
+    border-left: solid 5px lime;
+    border-bottom: solid 5px lime;
+    border-right: solid 5px lime;
+  }
+  75.02% {
+    border: solid 5px lime;
+  }
 }
 .dropdown .insights {
   transform: rotate(-90deg);
