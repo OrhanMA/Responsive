@@ -145,25 +145,29 @@ p {
     border: 5px solid $green;
     animation: borderAnimation 5s linear;
   }
-  
+
   @keyframes borderAnimation {
     0% {
-      border: solid 5px white;
-      border-left: solid 5px lime;
+      border: solid 5px transparent;
+      border-right: solid 5px lime;
+      border-bottom: solid 5px lime;
     }
     25% {
       border: solid 5px white;
-      border-left: solid 5px lime;
+      border-right: solid 5px lime;
+      border-bottom: solid 5px lime;
     }
     25.02% {
       border: solid 5px white;
-      border-left: solid 5px lime;
+      border-right: solid 5px lime;
       border-bottom: solid 5px lime;
+      border-left: solid 5px lime;
+      border-top: solid 5px lime;
     }
     50% {
       border: solid 5px white;
       border-left: solid 5px lime;
-      border-bottom: solid 5px lime;
+      border-top: solid 5px lime;
     }
     50.02% {
       border: solid 5px white;
@@ -259,7 +263,7 @@ p {
     height: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     padding-bottom: 5rem;
     padding-left: 3rem;
   }
@@ -271,7 +275,7 @@ p {
   }
   .services {
     background: url("../../assets/nav-services.jpg");
-    transform: translate(840px, 0px);
+    transform: translate(60vw, 0);
     background-repeat: no-repeat;
     animation: fromTopRight 1.5s ease;
   }
