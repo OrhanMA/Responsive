@@ -81,30 +81,36 @@ buttons.forEach((button) => {
   });
 });
 
-const designInfosContainer = document.querySelector(".perspective-effect");
-let isAnimating = false;
-let mouseX = 0;
-let mouseY = 0;
+function addPerspectiveEffect(containerSelector, rotateXFactor, rotateYFactor) {
+  const container = document.querySelector(containerSelector);
+  let isAnimating = false;
+  let mouseX = 0;
+  let mouseY = 0;
 
-designInfosContainer.addEventListener("mousemove", (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-  if (!isAnimating) {
-    requestAnimationFrame(updateTransform);
-    isAnimating = true;
+  container.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    if (!isAnimating) {
+      requestAnimationFrame(updateTransform);
+      isAnimating = true;
+    }
+  });
+
+  function updateTransform() {
+    const { offsetWidth: width, offsetHeight: height } = container;
+    const moveX = (mouseX / width - 0.5) * 20;
+    const moveY = (mouseY / height - 0.5) * 10;
+    const rotateY = moveX * rotateYFactor;
+    const rotateX = moveY * rotateXFactor;
+    container.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    isAnimating = false;
   }
-});
 
-function updateTransform() {
-  const { offsetWidth: width, offsetHeight: height } = designInfosContainer;
-  const moveX = (mouseX / width - 0.5) * 20;
-  const moveY = (mouseY / height - 0.5) * 10;
-  const rotateY = moveX * 2;
-  const rotateX = moveY * 2;
-  designInfosContainer.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-  isAnimating = false;
+  container.addEventListener("mouseleave", () => {
+    container.style.transform = "none";
+  });
 }
 
-designInfosContainer.addEventListener("mouseleave", () => {
-  designInfosContainer.style.transform = "none";
-});
+addPerspectiveEffect(".perspective-effect", 2, 2);
+addPerspectiveEffect(".system-design-infos", 2, 2);
+addPerspectiveEffect(".brave-design-infos", 2, 1);
