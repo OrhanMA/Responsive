@@ -768,8 +768,8 @@ header p:hover {
 .social-style {
   margin: 0 1% 0 1%;
   padding: 10px 10px;
-  width: 5%;
-  height: 5%;
+  width: 30px;
+  height: auto;
   background-color: white;
   border-radius: 50%;
 }
@@ -843,9 +843,6 @@ header p:hover {
   }
   .social-container {
     margin-top: 0;
-  }
-  .social-style {
-    width: 12%;
   }
 }
 
