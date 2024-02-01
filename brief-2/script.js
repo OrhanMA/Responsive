@@ -81,5 +81,30 @@ buttons.forEach((button) => {
   });
 });
 
-// console.log(menuButton);
-// console.log(closeButton);
+const designInfosContainer = document.querySelector(".perspective-effect");
+let isAnimating = false;
+let mouseX = 0;
+let mouseY = 0;
+
+designInfosContainer.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  if (!isAnimating) {
+    requestAnimationFrame(updateTransform);
+    isAnimating = true;
+  }
+});
+
+function updateTransform() {
+  const { offsetWidth: width, offsetHeight: height } = designInfosContainer;
+  const moveX = (mouseX / width - 0.5) * 20;
+  const moveY = (mouseY / height - 0.5) * 10;
+  const rotateY = moveX * 2;
+  const rotateX = moveY * 2;
+  designInfosContainer.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  isAnimating = false;
+}
+
+designInfosContainer.addEventListener("mouseleave", () => {
+  designInfosContainer.style.transform = "none";
+});
