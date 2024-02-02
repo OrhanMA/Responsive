@@ -139,8 +139,13 @@ p {
   }
 
   .agency {
-    transform: translateX(25px);
+    // transform: translateX(25px);
     animation: fromTopLeft 1.5s ease-in-out;
+  }
+
+  .agency:hover {
+    animation: borderAnimation 2s ease;
+    border: solid 15px lime;
   }
 
   @keyframes borderAnimation {
@@ -215,11 +220,11 @@ p {
   @keyframes fromTopLeft {
     0% {
       opacity: 0;
-      transform: translate(-50px, -400px);
+      transform: translateY(-400px);
     }
     100% {
       opacity: 1;
-      transform: translate(225x);
+      transform: translateY(0);
     }
   }
   @keyframes fromTopRight {
