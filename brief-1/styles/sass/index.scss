@@ -284,7 +284,7 @@ header {
   gap: 3rem;
   padding: 3rem 1rem;
   color: white;
-  height: 100vh;
+  min-height: 100vh;
 
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     grid-template-columns: repeat(2, 1fr);
@@ -521,7 +521,7 @@ header {
       button:hover {
         cursor: pointer;
       }
-      
+
       button {
         background-color: white;
         color: black;
@@ -546,9 +546,9 @@ header {
 
 .gallery {
   display: grid;
-  grid-template-areas: 
-  "gallery-aside"
-  "gallery-container";
+  grid-template-areas:
+    "gallery-aside"
+    "gallery-container";
 }
 
 .gallery-aside {
@@ -560,16 +560,17 @@ header {
 }
 
 .gallery-aside hr {
-  color:white;
+  color: white;
   width: 50%;
-  margin:5% 5%;
+  margin: 5% 5%;
   border: 1px solid white;
 }
 
 .gallery-aside p {
   color: white;
   margin-left: 5%;
-  margin-right: 5%
+  margin-right: 5%;
+  text-align: center;
 }
 
 .gallery-aside h2 {
@@ -608,7 +609,6 @@ header {
 // @media screen and (min-width: 768px) {
 //   @import "_tablette";
 // }
-
 
 .contact {
   display: flex;
@@ -700,19 +700,20 @@ header {
   text-transform: uppercase;
   color: rgb(216, 209, 209);
 }
-.footer p, span {
+.footer p,
+span {
   color: rgb(174, 170, 170);
 }
 .footer-container {
   display: grid;
-  grid-template-areas: 
-  "copyright"
-  "location"
-  "more-info"
-  "social-media";
+  grid-template-areas:
+    "copyright"
+    "location"
+    "more-info"
+    "social-media";
 }
 
- .copyright h1 {
+.copyright h1 {
   color: white;
   font-size: 1.3rem;
   font-weight: bold;
@@ -739,7 +740,7 @@ header {
 }
 
 .location-container div {
-  padding:0 5% 0 5%;
+  padding: 0 5% 0 5%;
 }
 
 .location-container p {
@@ -773,7 +774,7 @@ header {
 
 .social-style {
   margin: 0 1% 0 1%;
-  padding: 10px 10px ;
+  padding: 10px 10px;
   width: 30px;
   height: auto;
   background-color: white;
@@ -781,17 +782,9 @@ header {
 }
 
 .social-style svg {
-  fill: $dark-gray ;
+  fill: $dark-gray;
 }
 
 @media screen and (min-width: 1024px) {
   @import "_desktop";
 }
-
-
-
-
-
-
-
-
