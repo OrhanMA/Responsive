@@ -81,5 +81,36 @@ buttons.forEach((button) => {
   });
 });
 
-// console.log(menuButton);
-// console.log(closeButton);
+function addPerspectiveEffect(containerSelector, rotateXFactor, rotateYFactor) {
+  const container = document.querySelector(containerSelector);
+  let isAnimating = false;
+  let mouseX = 0;
+  let mouseY = 0;
+
+  container.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    if (!isAnimating) {
+      requestAnimationFrame(updateTransform);
+      isAnimating = true;
+    }
+  });
+
+  function updateTransform() {
+    const { offsetWidth: width, offsetHeight: height } = container;
+    const moveX = (mouseX / width - 0.5) * 20;
+    const moveY = (mouseY / height - 0.5) * 10;
+    const rotateY = moveX * rotateYFactor;
+    const rotateX = moveY * rotateXFactor;
+    container.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    isAnimating = false;
+  }
+
+  container.addEventListener("mouseleave", () => {
+    container.style.transform = "none";
+  });
+}
+
+addPerspectiveEffect(".perspective-effect", 2, 2);
+addPerspectiveEffect(".system-design-infos", 2, 2);
+addPerspectiveEffect(".brave-design-infos", 2, 1);

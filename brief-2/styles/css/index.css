@@ -269,7 +269,6 @@ p {
 
 .hero {
   height: 100vh;
-  margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -607,6 +606,194 @@ p {
 .show {
   opacity: 1;
   filter: blur(0);
+}
+
+.commerce,
+.system,
+.brave {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10rem;
+}
+
+.commerce-design,
+.system-design,
+.brave-design {
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 3rem;
+}
+
+.commerce-design-infos,
+.system-design-infos,
+.brave-design-infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 5rem;
+  text-align: left;
+  width: 40%;
+}
+@media screen and (min-width: 1200px) {
+  .commerce-design-infos,
+  .system-design-infos,
+  .brave-design-infos {
+    width: 30%;
+  }
+}
+.commerce-design-infos > p,
+.system-design-infos > p,
+.brave-design-infos > p {
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  width: 100%;
+  padding-left: 2rem;
+}
+.commerce-design-infos > h3,
+.system-design-infos > h3,
+.brave-design-infos > h3 {
+  font-size: 3rem;
+  width: 100%;
+  padding-left: 1.5rem;
+}
+.commerce-design-infos div,
+.system-design-infos div,
+.brave-design-infos div {
+  margin-top: 1rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.commerce-design-infos div p,
+.system-design-infos div p,
+.brave-design-infos div p {
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+.commerce-design-infos div div,
+.system-design-infos div div,
+.brave-design-infos div div {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 100%;
+  align-items: center;
+  gap: 1rem;
+}
+.commerce-design-infos div div svg,
+.system-design-infos div div svg,
+.brave-design-infos div div svg {
+  width: 15px;
+  transition: 0.3s ease-in-out;
+}
+.commerce-design-infos div div svg:hover,
+.system-design-infos div div svg:hover,
+.brave-design-infos div div svg:hover {
+  transform: translateX(10px);
+  transition: 0.3s ease-in-out;
+}
+
+.tablet-frame,
+.desktop-frame,
+.phone-frame {
+  position: relative;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .tablet-frame,
+  .desktop-frame,
+  .phone-frame {
+    height: 500px;
+  }
+}
+
+.tablet-image,
+.desktop-image,
+.phone-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.tablet-frame-image,
+.desktop-frame-image,
+.phone-frame-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.commerce .commerce-design {
+  background: url("../../assets/bg-texture-laptop.webp");
+}
+.commerce .commerce-design .commerce-design-infos > p {
+  color: #04e06d;
+}
+.commerce .commerce-design .commerce-design-infos > h3 {
+  color: #320255;
+}
+.commerce .commerce-design .commerce-design-infos div {
+  background-color: white;
+}
+.commerce .commerce-design .commerce-design-infos div p {
+  color: #320255;
+}
+.commerce .commerce-design .tablet-image {
+  transform: translate(-50%, -57%);
+  max-width: 75%;
+  max-height: 80%;
+}
+
+.system .system-design {
+  background: url("../../assets/bg-texture-2.webp");
+}
+.system .system-design .system-design-infos > p {
+  color: #04e06d;
+}
+.system .system-design .system-design-infos > h3 {
+  color: white;
+}
+.system .system-design .system-design-infos div {
+  background-color: #320255;
+}
+.system .system-design .system-design-infos div p {
+  color: white;
+}
+.system .system-design .desktop-image {
+  transform: translate(-50%, -50%);
+  max-width: 75%;
+  max-height: 80%;
+}
+
+.brave .brave-design {
+  background: url("../../assets/bg-texture-laptop.webp");
+}
+.brave .brave-design .brave-design-infos > p {
+  color: #04e06d;
+}
+.brave .brave-design .brave-design-infos > h3 {
+  color: #320255;
+}
+.brave .brave-design .brave-design-infos div {
+  background-color: white;
+}
+.brave .brave-design .brave-design-infos div p {
+  color: #320255;
+}
+.brave .brave-design .phone-image {
+  transform: translate(-50%, -55%);
+  max-width: 70%;
+  max-height: 70%;
 }
 
 /*# sourceMappingURL=index.css.map */
