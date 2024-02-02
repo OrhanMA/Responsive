@@ -136,51 +136,33 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: borderAnimation 5s linear;
   }
 
   .agency {
     transform: translateX(25px);
     animation: fromTopLeft 1.5s ease-in-out;
-    border: 5px solid $green;
-    animation: borderAnimation 5s linear;
   }
 
   @keyframes borderAnimation {
     0% {
-      border: solid 5px white;
-      border-left: solid 5px lime;
+      border: 15px solid transparent;
     }
     25% {
-      border: solid 5px white;
-      border-left: solid 5px lime;
-    }
-    25.02% {
-      border: solid 5px white;
-      border-left: solid 5px lime;
-      border-bottom: solid 5px lime;
+      border: 15px solid transparent;
+      border-bottom: 15px solid lime;
+      border-right: 15px solid lime;
     }
     50% {
-      border: solid 5px white;
-      border-left: solid 5px lime;
-      border-bottom: solid 5px lime;
+      border-bottom: 15px solid lime;
+      border-right: 15px solid lime;
+      border-top: 15px solid lime;
+      border-left: 15px solid lime;
     }
-    50.02% {
-      border: solid 5px white;
-      border-left: solid 5px lime;
-      border-bottom: solid 5px lime;
-      border-right: solid 5px lime;
-    }
-    75% {
-      border: solid 5px white;
-      border-left: solid 5px lime;
-      border-bottom: solid 5px lime;
-      border-right: solid 5px lime;
-    }
-    75.02% {
-      border: solid 5px lime;
+    100% {
+      border: 15px solid lime;
     }
   }
+// Fin
 
   .insights {
     transform: rotate(-90deg);
@@ -259,7 +241,7 @@ p {
     height: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     padding-bottom: 5rem;
     padding-left: 3rem;
   }
@@ -271,7 +253,7 @@ p {
   }
   .services {
     background: url("../../assets/nav-services.jpg");
-    transform: translate(840px, 0px);
+    transform: translate(60vw, 0);
     background-repeat: no-repeat;
     animation: fromTopRight 1.5s ease;
   }
